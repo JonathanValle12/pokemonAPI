@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(120deg, rgba(29, 32, 70, 1) 0%, rgba(59, 60, 94, 1) 100%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .cabecera-pokemon {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+main .cabecera-pokemon input {
+    outline: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+main .contenedor-filtrados {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+main .contenedor-filtrados select {
+    width: 130px;
+}
+main img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+main nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main .active{
+    background-color: #545454;
+}
+main nav li {
+    display: inline;
+    list-style: none;
+}
+main nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background .5 ease;
+}
+main nav li a:hover {
+    background-color: #545454;
+}
+.contenedor {
+    display: grid;
+    width: 100%;
+    max-width: 1100px;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 20px;
+
+}
+
+.contenedor article {
+    width: 250px;
+    height: 100%;
+    background-color: #434B4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+
+    position: relative;
+
+    cursor: pointer;
+    transition: transform .5s ease;
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor article:hover {
+    transform: scale(1.1);
+}
+.modal-open article:hover {
+    transform: none;
+    cursor: auto;
+}
+.contenedor article h2 {
+    margin-top: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+.contenedor .circulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    box-shadow: 0 6px 6px #000;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    border-radius: 50%;
+}
+.contenedor article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 80px;
+}
+.contenedor .container-caracteristicas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.contenedor .container-caracteristicas h3 {
+    color: #ccc;
+    font-size: 14px;
+}
+.contenedor .container-caracteristicas p {
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.contenedor article .tipo {
+    color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.contenedor article .tipo span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contenedor article .identificacion {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: #fff;
+}
+
+.contenedor article .identificacion .color-tipo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 0);
+}
+.contenedor .bola {
+    border-radius: 100%;
+    padding: 8px;
+}
+
+/*** Fondo Identifador bola ***/
+.contenedor .tipo-fire {
+    background-color: red;
+}
+.contenedor .tipo-grass {
+    background-color: #78C850;
+}
+.contenedor .tipo-poison {
+    background-color: #A040A0;
+}
+.contenedor .tipo-ground {
+    background-color: #926F3F;
+}
+.contenedor .tipo-dark {
+    background-color: #3a6363;
+}
+.contenedor .tipo-ghost {
+    background-color: #4B0082;
+}
+.contenedor .tipo-bug {
+    background-color: #4E8234;
+}
+.contenedor .tipo-psychic {
+    background-color: #FF69B4;
+}
+.contenedor .tipo-water {
+    background-color: #6495ED;
+}
+.contenedor .tipo-fighting {
+    background-color: #CD5C5C;
+}
+.contenedor .tipo-dragon {
+    background-color: #7038F8;
+}
+.contenedor .tipo-normal {
+    background-color: #D8D8D8;
+}
+.contenedor .tipo-fairy {
+    background-color: #fc5aab;
+}
+.contenedor .tipo-electric {
+    background-color: #FFD700;
+}
+.contenedor .tipo-rock {
+    background-color: #8B4513;
+}
+.contenedor .tipo-ice {
+    background-color: #B0E0E6;
+}
+.contenedor .tipo-steel {
+    background-color: #C0C0C0;
+}
+.contenedor .tipo-flying {
+    background-color: #ADD8E6;
+}
+
+/*** Border Article Pokemon ***/
+
+.contenedor .fire {
+    border: 2px solid red;
+}
+.contenedor .grass {
+    border: 2px solid #78C850;
+}
+.contenedor .poison {
+    border: 2px solid #A040A0;
+}
+.contenedor .ground {
+    border: 2px solid #926F3F;
+}
+.contenedor .dark {
+    border: 2px solid #3a6363; 
+}
+.contenedor .ghost {
+    border: 2px solid #4B0082;
+}
+.contenedor .bug {
+    border: 2px solid #4E8234;
+}
+.contenedor .psychic {
+    border: 2px solid #FF69B4;
+}
+.contenedor .water {
+    border: 2px solid #6495ED;
+}
+.contenedor .fighting {
+    border: 2px solid #CD5C5C;
+}
+.contenedor .dragon {
+    border: 2px solid #7038F8;
+}
+.contenedor .normal {
+    border: 2px solid #D8D8D8;
+}
+.contenedor .fairy {
+    border: 2px solid #fc5aab;
+}
+.contenedor .electric {
+    border: 2px solid #FFD700;
+}
+.contenedor .rock {
+    border: 2px solid #8B4513;
+}
+.contenedor .ice {
+    border: 2px solid #B0E0E6;
+}
+.contenedor .steel {
+    border: 2px solid #C0C0C0;
+}
+.contenedor .flying {
+    border: 2px solid #ADD8E6;
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .contenedor article {
+        width: 100%;
+        max-width: 240px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    main .cabecera-pokemon {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    main nav {
+        width: 100%;
+        row-gap: 30px;
+    }
+    main .contenedor-filtrados {
+        margin-bottom: 20px;
+        gap: 130px;
+    }
+}

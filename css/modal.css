@@ -1,0 +1,188 @@
+.modal {
+    width: 350px;
+    height: 670px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    background-color: #fff;
+    z-index: 9999;
+    transition: opacity .3s ease; /* Agrega una transición de opacidad */
+    opacity: 0;
+    pointer-events: none; /* No captura clics cuando está oculto */
+}
+.modal.open {
+    opacity: 1;
+    pointer-events: auto; /* Captura clics cuando está visible */
+}
+.modal-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color); /* Color negro semi-transparente */
+    z-index: 999; /* Asegura que el fondo oscuro esté por encima de otros elementos */
+}
+.modal-open {
+    overflow: hidden;
+}
+.modal-content.fire,
+.modalPokemonType.fire {
+    background-color: red;
+}
+.modal-content.grass,
+.modalPokemonType.grass {
+    background-color: #78C850;
+}
+.modal-content.poison,
+.modalPokemonType.poison {
+    background-color: #A040A0;
+}
+.modal-content .ground,
+.modalPokemonType.ground {
+    background-color: #926F3F;
+}
+.modal-content .dark,
+.modalPokemonType.dark {
+    background-color: #3a636e;
+}
+.modal-content.ghost,
+.modalPokemonType.ghost {
+    background-color: #4B0082;
+}
+.modal-content.bug,
+.modalPokemonType.bug {
+    background-color: #4E8234;
+}
+.modal-content.psychic,
+.modalPokemonType.psychic {
+    background-color: #FF69B4;
+}
+.modal-content.water,
+.modalPokemonType.water {
+    background-color: #6495ED;
+}
+.modal-content.fighting,
+.modalPokemonType.fighting {
+    background-color: #7038F8; 
+}
+.modal-content.normal,
+.modalPokemonType.normal {
+    background-color: #D8D8D8;
+}
+.modal-content.fairy,
+.modalPokemonType.fairy {
+    background-color: #fc5aab;
+}
+.modal-content.electric,
+.modalPokemonType.electric {
+    background-color: #FFD700;
+}
+.modal-content.rock,
+.modalPokemonType.rock {
+    background-color: #8B4513;
+}
+.modal-content.ice,
+.modalPokemonType.ice {
+    background-color: #B0E0E6;
+}
+.modal-content.steel,
+.modalPokemonType.steel {
+    background-color: #C0C0C0;
+}
+.modal-content.flying,
+.modalPokemonType.flying {
+    background-color: #ADD8E6;
+}
+.modal-content {
+    width: 100%;
+    height: 160px;
+    border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    color: #000;
+}
+.modalPokemonType {
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 5px;
+}
+.modal-content .modalPokemonInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content .modalPokemonInfo img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-top: -30px;
+    border-radius: 50%;
+}
+.modal-content .modalPokemonInfo h2 {
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+.modal-content .modalPokemonInfo span {
+    margin-bottom: 15px;
+}
+.close {
+    color: #000000;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.modalType {
+    padding: 3px 14px;
+    color: #fff;
+    border-radius: 5px;
+}
+.modal-content .container-fisicas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.modal-content .container-perfomances h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-content .container-perfomances {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.modal-content .container-perfomances div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-content .container-perfomances div span {
+    display: block;
+    width: 80%; /* Ancho fijo para los elementos <span> */
+    border-radius: 10px;
+    background-color: #ccc;
+    padding: 10px 10px;
+    margin: 10px auto;
+    text-align: center; /* Alinea el texto en el centro */
+    position: relative;
+}
+
+.modal-content .container-perfomances div span::before {
+    content: '';
+    height: 100%;
+    background-color: var(--color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: var(--stat-width); /* Establece el ancho del pseudoelemento */
+}

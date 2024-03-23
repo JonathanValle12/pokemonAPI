@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+    <main>
+        <header class="cabecera-pokemon">
+
+            <img src="img/tituloPokemon.png" />
+            <div class="contenedor-filtrados">
+                <select class="filtroTipo">
+                    <option value="">Todos los tipos</option>
+                </select>
+                <input type="search" name="buscador" id="buscador" placeholder="Buscar por su id o nombre" />
+            </div>
+        </header>
+        <nav>
+            <li><a id="gen1">Generacion 1</a></li>
+            <li><a id="gen2">Generacion 2</a></li>
+            <li><a id="gen3">Generacion 3</a></li>
+            <li><a id="gen4">Generacion 4</a></li>
+            <li><a id="gen5">Generacion 5</a></li>
+            <li><a id="gen6">Generacion 6</a></li>
+            <li><a id="gen7">Generacion 7</a></li>
+            <li><a id="gen8">Generacion 8</a></li>
+            <li><a id="gen9">Generacion 9</a></li>
+        </nav>
+        <section class="contenedor">
+
+        </section>
+
+        <section class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <div id="modalPokemonInfo" class="modalPokemonInfo">
+                    <img id="modalPokemonImage" src="" alt="Imagen del Pokémon" />
+
+                    <h2 id="modalPokemonName" class="modalPokemonName"></h2>
+                    <span id="modalPokemonType" class="modalPokemonType"></span>
+
+                    <div class="container-fisicas">
+                        <div>
+                            <h3 id="caracteristica-peso">32</h3>
+                            <p>Weight</p>
+                        </div>
+                        <div>
+                            <h3 id="caracteristica-altura">32</h3>
+                            <p>Height</p>
+                        </div>
+                    </div>
+                    <div class="container-perfomances">
+                        <h3>6 Perfomances</h3>
+                        <div>HP <span id="hp"></span></div>
+                        
+                        <div>ATK: <span id="ataque"></span></div>
+                        
+                        <div>DEF: <span id="defensa"></span></div>
+                        
+                        <div>ATQ ESP: <span id="ataque-especial"></span></div>
+                        <div>DEF ESP: <span id="defensa-especial"></span></div>
+                        <div>VEL: <span id="velocidad-especial"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="pokemon.js"></script>
+</body>
+
+</html>
