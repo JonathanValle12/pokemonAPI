@@ -1,5 +1,6 @@
 'use strict';
 import { obtenerPokemons  } from "./pokemonService.js";
+import { cerrarModal } from "./modal.js";
 
 window.addEventListener('load', () => {
     const primerEnlace = document.querySelector('nav a:first-child');
