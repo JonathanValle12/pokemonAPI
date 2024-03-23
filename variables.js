@@ -1,5 +1,4 @@
 'use strict'
-
 export let allPokemonLoaded = false;
 export let currentGeneration = '';
 export let currentIndex = 0; // Índice para rastrear la cantidad de Pokémon ya mostrados

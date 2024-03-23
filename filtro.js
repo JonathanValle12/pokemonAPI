@@ -18,10 +18,11 @@ export function aplicarFiltroPorTipo(inmediato = false) {
     const aplicarFiltro = () => {
         articles.forEach(article => {
             const tiposPokemon = article.querySelector('.tipos').textContent.toLowerCase();
-
-            // Mostrar el elemento si coincide con el tipo seleccionado o si no hay tipo seleccionado
-            // Ocultar el elemento si no coincide con el tipo seleccionado y hay un tipo seleccionado
-            article.style.display = (tipoSeleccionado === '' || tiposPokemon.includes(tipoSeleccionado)) ? 'block' : 'none';
+             if(tipoSeleccionado === '' || tiposPokemon.includes(tipoSeleccionado)) {
+                article.style.display = 'block';
+             } else {
+                article.style.display = 'none';
+             }
         });
     };
 

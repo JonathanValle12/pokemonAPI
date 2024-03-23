@@ -10,6 +10,9 @@ export async function obtenerPokemons(generacion) {
     if (isLoading || allPokemonLoaded) return;
 
     isLoading = true;
+
+    document.getElementById('loading').style.display = 'block';
+    
     try {
         const { startIndex, endIndex } = generaciones[generacion];
 
@@ -34,6 +37,8 @@ export async function obtenerPokemons(generacion) {
 
         renderizarPokemones(pokemonDetails);
 
+        isLoading = false;
+        document.getElementById('loading').style.display = 'none';
         // Incrementar currentIndex para la próxima carga
         window.currentIndex += limit;
 

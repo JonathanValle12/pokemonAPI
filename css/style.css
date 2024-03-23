@@ -16,6 +16,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 main .cabecera-pokemon {
     width: 80%;
     display: flex;
@@ -23,23 +24,48 @@ main .cabecera-pokemon {
     justify-content: space-around;
     align-items: center;
 }
+
 main .cabecera-pokemon input {
     outline: none;
     padding: 12px;
     border-radius: 5px;
 }
+
 main .contenedor-filtrados {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
+
 main .contenedor-filtrados select {
     width: 130px;
 }
+
 main img {
     width: 300px;
     height: 200px;
     object-fit: cover;
+}
+
+main .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 main nav {
@@ -50,13 +76,16 @@ main nav {
     flex-wrap: wrap;
     justify-content: center;
 }
-main .active{
+
+main .active {
     background-color: #545454;
 }
+
 main nav li {
     display: inline;
     list-style: none;
 }
+
 main nav li a {
     text-decoration: none;
     font-weight: bold;
@@ -65,9 +94,11 @@ main nav li a {
     cursor: pointer;
     transition: background .5 ease;
 }
+
 main nav li a:hover {
     background-color: #545454;
 }
+
 .contenedor {
     display: grid;
     width: 100%;
@@ -95,27 +126,30 @@ main nav li a:hover {
 
     cursor: pointer;
     transition: transform .5s ease;
-    
+
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .contenedor article:hover {
     transform: scale(1.1);
 }
+
 .modal-open article:hover {
     transform: none;
     cursor: auto;
 }
+
 .contenedor article h2 {
     margin-top: 20px;
     line-height: 50px;
     text-align: center;
 }
+
 .contenedor .circulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     box-shadow: 0 6px 6px #000;
     width: 140px;
@@ -123,22 +157,26 @@ main nav li a:hover {
     margin: auto;
     border-radius: 50%;
 }
+
 .contenedor article img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-top: 80px;
 }
+
 .contenedor .container-caracteristicas {
     display: flex;
     justify-content: center;
     gap: 20px;
     text-align: center;
 }
+
 .contenedor .container-caracteristicas h3 {
     color: #ccc;
     font-size: 14px;
 }
+
 .contenedor .container-caracteristicas p {
     font-size: 17px;
     margin-top: 5px;
@@ -148,7 +186,7 @@ main nav li a:hover {
     color: #ccc;
     text-align: center;
     margin-top: 10px;
-    
+
 }
 
 .contenedor article .tipo span {
@@ -174,6 +212,7 @@ main nav li a:hover {
     border-radius: 50%;
     background-color: rgb(0, 255, 0);
 }
+
 .contenedor .bola {
     border-radius: 100%;
     padding: 8px;
@@ -183,54 +222,71 @@ main nav li a:hover {
 .contenedor .tipo-fire {
     background-color: red;
 }
+
 .contenedor .tipo-grass {
     background-color: #78C850;
 }
+
 .contenedor .tipo-poison {
     background-color: #A040A0;
 }
+
 .contenedor .tipo-ground {
     background-color: #926F3F;
 }
+
 .contenedor .tipo-dark {
     background-color: #3a6363;
 }
+
 .contenedor .tipo-ghost {
     background-color: #4B0082;
 }
+
 .contenedor .tipo-bug {
     background-color: #4E8234;
 }
+
 .contenedor .tipo-psychic {
     background-color: #FF69B4;
 }
+
 .contenedor .tipo-water {
     background-color: #6495ED;
 }
+
 .contenedor .tipo-fighting {
     background-color: #CD5C5C;
 }
+
 .contenedor .tipo-dragon {
     background-color: #7038F8;
 }
+
 .contenedor .tipo-normal {
     background-color: #D8D8D8;
 }
+
 .contenedor .tipo-fairy {
     background-color: #fc5aab;
 }
+
 .contenedor .tipo-electric {
     background-color: #FFD700;
 }
+
 .contenedor .tipo-rock {
     background-color: #8B4513;
 }
+
 .contenedor .tipo-ice {
     background-color: #B0E0E6;
 }
+
 .contenedor .tipo-steel {
     background-color: #C0C0C0;
 }
+
 .contenedor .tipo-flying {
     background-color: #ADD8E6;
 }
@@ -240,60 +296,77 @@ main nav li a:hover {
 .contenedor .fire {
     border: 2px solid red;
 }
+
 .contenedor .grass {
     border: 2px solid #78C850;
 }
+
 .contenedor .poison {
     border: 2px solid #A040A0;
 }
+
 .contenedor .ground {
     border: 2px solid #926F3F;
 }
+
 .contenedor .dark {
-    border: 2px solid #3a6363; 
+    border: 2px solid #3a6363;
 }
+
 .contenedor .ghost {
     border: 2px solid #4B0082;
 }
+
 .contenedor .bug {
     border: 2px solid #4E8234;
 }
+
 .contenedor .psychic {
     border: 2px solid #FF69B4;
 }
+
 .contenedor .water {
     border: 2px solid #6495ED;
 }
+
 .contenedor .fighting {
     border: 2px solid #CD5C5C;
 }
+
 .contenedor .dragon {
     border: 2px solid #7038F8;
 }
+
 .contenedor .normal {
     border: 2px solid #D8D8D8;
 }
+
 .contenedor .fairy {
     border: 2px solid #fc5aab;
 }
+
 .contenedor .electric {
     border: 2px solid #FFD700;
 }
+
 .contenedor .rock {
     border: 2px solid #8B4513;
 }
+
 .contenedor .ice {
     border: 2px solid #B0E0E6;
 }
+
 .contenedor .steel {
     border: 2px solid #C0C0C0;
 }
+
 .contenedor .flying {
     border: 2px solid #ADD8E6;
 }
 
 @media screen and (max-width: 1200px) {
-    
+
     .contenedor article {
         width: 100%;
         max-width: 240px;
@@ -305,11 +378,13 @@ main nav li a:hover {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 1100px) {
     main nav {
         width: 100%;
         row-gap: 30px;
     }
+
     main .contenedor-filtrados {
         margin-bottom: 20px;
         gap: 130px;
